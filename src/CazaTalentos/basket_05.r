@@ -1,4 +1,4 @@
-require("data.table")
+ require("data.table")
 
 set.seed( 102191 )
 
