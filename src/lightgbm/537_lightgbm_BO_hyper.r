@@ -27,15 +27,18 @@ kBO_iter  <- 150   #aumento las iteraciones ya que tengo dos hiperparametros mas
 #Aqui se cargan los hiperparametros
 hs <- makeParamSet( 
          makeNumericParam("learning_rate",    lower=  0.01 , upper=    0.3),
-         makeNumericParam("feature_fraction", lower=  0.2  , upper=    1.0),
+         makeNumericParam("feature_fraction", lower=  0.2  , upper=    1.0), #pondria 0.75
          makeIntegerParam("min_data_in_leaf", lower=  0    , upper= 8000),
          makeIntegerParam("num_leaves",       lower= 16L   , upper= 1024L),
          makeNumericParam("prob_corte",       lower= 1/120 , upper=  1/20),
          makeNumericParam("lambda_l1",        lower=  0    , upper=   100),
          makeNumericParam("lambda_l2",        lower=  0    , upper=   100)
+         #, is_unbalance = TRUE
+         #, makeNumericParam("subsample", lower= 0.2, upper= 1.0)
+         #, makeNumericParam("num_iterations", lower= 300, upper= 700) ¿?
         )
 
-ksemilla_azar  <- 102191  #Aqui poner la propia semilla
+ksemilla_azar  <- 999983  #Aqui poner la propia semilla
 
 #------------------------------------------------------------------------------
 #graba a un archivo los componentes de lista
@@ -96,7 +99,7 @@ EstimarGanancia_lightgbm  <- function( x )
                           boost_from_average= TRUE,
                           feature_pre_filter= FALSE,
                           verbosity= -100,
-                          seed= 999983,
+                          # seed= 999983,
                           max_depth=  -1,         # -1 significa no limitar,  por ahora lo dejo fijo
                           min_gain_to_split= 0.0, #por ahora, lo dejo fijo
                           # lambda_l1= 0.0,       # ATENCION LINEA COMENTADA
