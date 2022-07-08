@@ -45,14 +45,23 @@ param:
     promedio:  [  TRUE, FALSE,  TRUE, FALSE ]   #promedio de la ventana
     ratioavg:  [ TRUE, FALSE, FALSE, FALSE ]   #valor sobre el promedio de la ventana
     ratiomax:  [ FALSE, FALSE, FALSE, FALSE ]   #valor sobre el maximo de la ventana
-    canaritos: [   0.1,   0.0,   0.0,   0.0 ]   #porcentaje de canaritos asesinos, del total de columnas del dataset, 0 indica NO reducir campos por canaritos
+    canaritos: [   0.2,   0.0,   0.0,   0.0 ]   #porcentaje de canaritos asesinos, del total de columnas del dataset, 0 indica NO reducir campos por canaritos
 
 
   tony:  FALSE
 
   rankeador: FALSE
 
-  canaritos_final: 0.0   #si es CERO entonces no hace el filtrado final por canaritos
+  canaritos_final: 0.2   #si es CERO entonces no hace el filtrado final por canaritos
+
+#ADICIONAL PARA CORRER Z913_FE_UTN
+  randomforest:    #crea variables {0,1}  con las hojas de un random forest, ATENCION que explota !!
+    correr:         TRUE
+    num.trees:        50
+    max.depth:         3
+    min.node.size:   500
+    mtry:             13
+###################################
 
   files:
     input:
