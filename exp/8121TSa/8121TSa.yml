@@ -10,7 +10,7 @@ experiment:
   name: "exp"
   type: "TrainingStrategy"
   tags: [ "austero" ]
-  requires: [ "8120FEa" ]
+  requires: [ "8121FEa" ]
 
 
 param:
@@ -29,7 +29,7 @@ param:
   train:
     periodos: [ ]
     rango:
-      desde:  202001
+      desde:  202002
       hasta:  202009
     excluir: [ 202006 ]
     undersampling: [ ]  #ATENCION  sin undersampling
