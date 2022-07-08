@@ -1,0 +1,20 @@
+run_uuid: b7b5b64d03274997b8aaa282f93f8dc2
+experiment_id: '1'
+user_id: bejar_shai
+status: RUNNING
+start_time: 1.6570382e+09
+artifact_uri: mlflow-artifacts:/1/b7b5b64d03274997b8aaa282f93f8dc2/artifacts
+lifecycle_stage: active
+run_id: b7b5b64d03274997b8aaa282f93f8dc2
+end_time: .na
+metrics: .na
+params: .na
+tags:
+- key:
+  - mlflow.user
+  - mlflow.source.name
+  - mlflow.source.type
+  value:
+  - bejar_shai
+  - /home/bejar_shai/labo/src/lib/exp_run_init.r
+  - LOCAL
