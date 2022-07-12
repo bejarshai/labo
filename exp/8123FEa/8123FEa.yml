@@ -23,9 +23,9 @@ param:
   corregir: "AsignarNA"     #  Repara las variables rotas { "NO", "ClaudioCastillo", "AsignarNA" }
   variablesdrift: [ ] #Variables a aeliminar
   
-  variablesmanuales: FALSE   #NO SE AGREGAN VARIABLES MANUALES
+  variablesmanuales: TRUE   #NO SE AGREGAN VARIABLES MANUALES
 
-  acumulavars: TRUE   #a lo nuevo lo va aplicando
+  acumulavars: FALSE   #a lo nuevo lo va aplicando
 
 
   #lags y sus deltas
