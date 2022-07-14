@@ -25,7 +25,7 @@ param:
   
   variablesmanuales: TRUE   #NO SE AGREGAN VARIABLES MANUALES
 
-  acumulavars: TRUE   #a lo nuevo lo va aplicando
+  acumulavars: FALSE   #a lo nuevo lo va aplicando
 
 
   #lags y sus deltas
@@ -42,8 +42,8 @@ param:
     tendencia: [  TRUE,  TRUE,  TRUE,  TRUE ]   #pendiente de la recta ajustada por cuadrados minimos
     minimo:    [ FALSE,  FALSE, FALSE, FALSE ]   #minimo de la ventana
     maximo:    [ FALSE, FALSE, FALSE, FALSE ]   #maximo de la ventana
-    promedio:  [  TRUE, TRUE,  TRUE, FALSE ]   #promedio de la ventana
-    ratioavg:  [ TRUE, TRUE, FALSE, FALSE ]   #valor sobre el promedio de la ventana
+    promedio:  [  TRUE, FALSE,  TRUE, FALSE ]   #promedio de la ventana
+    ratioavg:  [ TRUE, FALSE, FALSE, FALSE ]   #valor sobre el promedio de la ventana
     ratiomax:  [ FALSE, FALSE, FALSE, FALSE ]   #valor sobre el maximo de la ventana
     canaritos: [   0.2,   0.2,   0.0,   0.0 ]   #porcentaje de canaritos asesinos, del total de columnas del dataset, 0 indica NO reducir campos por canaritos
 
@@ -58,7 +58,7 @@ param:
   randomforest:    #crea variables {0,1}  con las hojas de un random forest, ATENCION que explota !!
     correr:         TRUE
     num.trees:        50
-    max.depth:         6
+    max.depth:         5
     min.node.size:   500
     mtry:             13
 ###################################
