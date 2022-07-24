@@ -73,7 +73,7 @@ dev.off()
 h <- 20
 distintos <- 0
 
-while(  h>0  &  !( distintos >=6 & distintos <=7 ) )
+while(  h>0  &  !( distintos >=4 & distintos <=5 ) )
 {
   h <- h - 1 
   rf.cluster  <- cutree( hclust.rf, h)
